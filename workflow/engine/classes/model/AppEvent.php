@@ -242,7 +242,7 @@ class AppEvent extends BaseAppEvent {
           $oEv  = EventPeer::retrieveByPk($aRow['EVN_UID']);
           $log[]  = 'Event ' . $oEv->getEvnDescription() . ' with ID ' . $aRow['EVN_UID'];
 
-          println("\nOK+ event \"".$oEv->getEvnDescription()."\" with ID {} was found");
+          println("\nOK+ event \"".$oEv->getEvnDescription()."\" with ID {$aRow['EVN_UID']} was found");
           println(" - PROCESS................".$aRow['PRO_UID']);
           println(" - APPLICATION............".$aRow['APP_UID']." CASE #".$oApp->getAppNumber());
           println(" - ACTION DATE............".$aRow['APP_EVN_ACTION_DATE']);
