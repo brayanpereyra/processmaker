@@ -76,14 +76,14 @@ if (isset($_GET["id"]) && isset($_GET["id"])) {
     }
 }
 
-  $oServerConf =& serverConf::getSingleton();
-  if ($oServerConf->isRtl(SYS_LANG)) {
+$oServerConf =& serverConf::getSingleton();
+if ($oServerConf->isRtl(SYS_LANG)) {
     $regionTreePanel = 'east';
     $regionDebug = 'west';
-  } else {
+} else {
     $regionTreePanel = 'west';
     $regionDebug = 'east';
-  }
+}
 $oHeadPublisher->assign('regionTreePanel', $regionTreePanel);
 $oHeadPublisher->assign('regionDebug', $regionDebug);
 $oHeadPublisher->assign("defaultOption", $defaultOption); //User menu permissions

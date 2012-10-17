@@ -86,6 +86,13 @@ if ($adminSelected != null) {
   }
 }
 
+$oServerConf =& serverConf::getSingleton();
+if ($oServerConf->isRtl(SYS_LANG)) {
+    $regionPanelAdmin = 'east';
+} else {
+    $regionPanelAdmin = 'west';
+}
+$oHeadPublisher->assign('regionPanelAdmin', $regionPanelAdmin);
 ///////
 $oHeadPublisher->addExtJsScript("setup/main", true); //adding a javascript file .js
 $oHeadPublisher->addContent("setup/main"); //adding a html file .html.

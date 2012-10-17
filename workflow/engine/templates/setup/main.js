@@ -109,7 +109,7 @@ var main = function(){
     layout: 'border',
     items: [
       new Ext.TabPanel({
-        region: 'west',
+        region: regionPanelAdmin,
         id: 'west-panel', // see Ext.getCmp() below
         title: 'West',
         split: true,
