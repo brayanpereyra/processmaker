@@ -82,8 +82,11 @@ foreach ($_POST['aUsers'] as $sUser) {
                     if (is_bool($evalValue) && $evalValue == true) {
                         $statusValue = 'ACTIVE';
                     }
+                    
+                    G::pr($evalValue);
+                    die;
                     if ( (is_float($evalValue) || is_int($evalValue) ||
-                          is_integer($evalValue) || is_numeric($evalValue)) && (int)$evalValue != 0) {
+                          is_integer($evalValue) || is_numeric($evalValue)) && ((int)$evalValue != 0 || (int)$evalValue != 66050)) {
                         $statusValue = 'ACTIVE';
                     }
                     $aData[$value['attributeUser']] = $statusValue;
